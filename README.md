@@ -1,3 +1,50 @@
+# EEZ Studio example with Renesas EK-RA6M3G and LVGL
+
+![EK-RA6M3G Kit Showing EEZ Studio Application](EK-RA6M3G_CounterApp.png)
+
+
+Integration steps:
+
+- Open `counter.eez-project` in the [EEZ Studio](https://github.com/eez-open/studio/releases)
+
+![EEZ Studio Project Editor](EEZ_Studio.png)
+
+- Build the project source code files:
+
+![alt text](EEZ_Studio_Build.png)
+
+Source code files are generated inside `src/ui` folder.
+
+- Add `ui_init()` and `ui_tick()` in `src/LVGL_thread_entry.c`
+
+```
+#include "ui/ui.h" // Add this!
+
+// ...
+
+void LVGL_thread_entry(void *pvParameters)
+{
+    lv_init();
+    board_init();
+
+    ui_init(); // Add this!
+
+    // ...
+    // Comment out LVGL demo
+    // ...
+
+    while (1)
+    {
+        lv_timer_handler();
+
+        ui_tick(); // Add this!
+
+        vTaskDelay (1);
+    }
+}
+```
+
+
 # LVGL ported to Renesas EK-RA6M3G
 
 ## Overview

@@ -1,5 +1,5 @@
 FSP Configuration
-  Board "EK-RA6M3G"
+  Board "RA6|RA6M3|EK-RA6M3G"
   R7FA6M3AH3CFC
     part_number: R7FA6M3AH3CFC
     rom_size_bytes: 2097152
@@ -13,7 +13,22 @@ FSP Configuration
     
   RA6M3 Family
     Enable inline BSP IRQ functions: Enabled
-    OFS0 register settings: Independent WDT: Start Mode: IWDT is Disabled
+    SDRAM: SDRAM Support: Disabled
+    SDRAM: Timings: tRAS (cycles): 6 cycles
+    SDRAM: Timings: tRCD (cycles): 3 cycles
+    SDRAM: Timings: tRP (cycles): 3 cycles
+    SDRAM: Timings: tWR (cycles): 2 cycles
+    SDRAM: Timings: tCL (cycles): 3 cycles
+    SDRAM: Timings: tRFC (cycles): 937
+    SDRAM: Timings: tREFW (cycles): 8 cycles
+    SDRAM: Initialization: Auto-Refresh Interval (ARFI): 10 cycles
+    SDRAM: Initialization: Auto-Refresh Count (ARFC): 8 times
+    SDRAM: Initialization: Precharge Cycle Count (PRC): 3 cycles
+    SDRAM: Address Multiplex Shift: 9-bit shift
+    SDRAM: Endian Mode: Little Endian
+    SDRAM: Continuous Access Mode: Enabled
+    SDRAM: Bus Width: 16-bit
+    OFS0 register settings: Independent WDT: Start Mode: IWDT is stopped after a reset
     OFS0 register settings: Independent WDT: Timeout Period: 2048 cycles
     OFS0 register settings: Independent WDT: Dedicated Clock Frequency Divisor: 128
     OFS0 register settings: Independent WDT: Window End Position:  0% (no window end position)
@@ -49,7 +64,8 @@ FSP Configuration
     MPU: Memory Region 3 Start: 0x400DFFFC
     MPU: Memory Region 3 End: 0x400DFFFF
     Clocks: HOCO FLL Function: Disabled
-    Main Oscillator Wait Time: 8163 cycles
+    Clocks: MOSC Drive Capability Auto Switching: Disabled
+    Clocks: Main Oscillator Wait Time: 8163 cycles
     ID Code Mode: Unlocked (Ignore ID)
     ID Code (32 Hex Characters): FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
     
@@ -145,7 +161,7 @@ FSP Configuration
       P301 87 - - Low None Disabled CMOS None "AGT0: AGTIO; BUS0: A06; GLCDC0: LCD_DATA13; GPT4: GTIOCB; IRQ0: IRQ06; OPS0: GTOULO; SCI2: RXD_MISO; SCI2: SCL; SCI9: CTS_RTS_SS; SPI1: SSL2" - IO - - 
       P302 86 - - Low None Disabled CMOS None "BUS0: A07; GLCDC0: LCD_DATA14; GPT4: GTIOCA; IRQ0: IRQ05; OPS0: GTOUUP; SCI2: SDA; SCI2: TXD_MOSI; SPI1: SSL3" - IO - - 
       P303 85 - - Low - Disabled CMOS None "BUS0: A08; GLCDC0: LCD_DATA15; GPT7: GTIOCB" - IO - - 
-      P304 82 GPIO LCD_RESET Low None "Output mode (Initial High)" CMOS None "BUS0: A09; GLCDC0: LCD_DATA16; GPT7: GTIOCA; IRQ0: IRQ09; OPS0: GTOWLO; SCI6: RXD_MISO; SCI6: SCL" - IO - - 
+      P304 82 GPIO LCD_DISPON Low None "Output mode (Initial High)" CMOS None "BUS0: A09; GLCDC0: LCD_DATA16; GPT7: GTIOCA; IRQ0: IRQ09; OPS0: GTOWLO; SCI6: RXD_MISO; SCI6: SCL" - IO - - 
       P305 81 QSPI0_QSPCLK - High None "Peripheral mode" CMOS None "BUS0: A10; GLCDC0: LCD_DATA17; IRQ0: IRQ08; OPS0: GTOWUP; QSPI0: QSPCLK; SCI6: SDA; SCI6: TXD_MOSI" - IO - - 
       P306 80 QSPI0_QSSL - High - "Peripheral mode" CMOS None "BUS0: A11; GLCDC0: LCD_DATA18; OPS0: GTOULO; QSPI0: QSSL; SCI6: SCK" - IO - - 
       P307 79 QSPI0_QIO0 - High - "Peripheral mode" CMOS None "BUS0: A12; GLCDC0: LCD_DATA19; OPS0: GTOUUP; QSPI0: QIO0; SCI6: CTS_RTS_SS" - IO - - 
@@ -322,7 +338,7 @@ FSP Configuration
       P301 87 - - Low None Disabled CMOS None "AGT0: AGTIO; BUS0: A06; GLCDC0: LCD_DATA13; GPT4: GTIOCB; IRQ0: IRQ06; OPS0: GTOULO; SCI2: RXD_MISO; SCI2: SCL; SCI9: CTS_RTS_SS; SPI1: SSL2" - IO - - 
       P302 86 - - Low None Disabled CMOS None "BUS0: A07; GLCDC0: LCD_DATA14; GPT4: GTIOCA; IRQ0: IRQ05; OPS0: GTOUUP; SCI2: SDA; SCI2: TXD_MOSI; SPI1: SSL3" - IO - - 
       P303 85 - - Low - Disabled CMOS None "BUS0: A08; GLCDC0: LCD_DATA15; GPT7: GTIOCB" - IO - - 
-      P304 82 - LCD_RESET Low None Disabled CMOS None "BUS0: A09; GLCDC0: LCD_DATA16; GPT7: GTIOCA; IRQ0: IRQ09; OPS0: GTOWLO; SCI6: RXD_MISO; SCI6: SCL" - IO - - 
+      P304 82 - LCD_DISPON Low None Disabled CMOS None "BUS0: A09; GLCDC0: LCD_DATA16; GPT7: GTIOCA; IRQ0: IRQ09; OPS0: GTOWLO; SCI6: RXD_MISO; SCI6: SCL" - IO - - 
       P305 81 - - Low None Disabled CMOS None "BUS0: A10; GLCDC0: LCD_DATA17; IRQ0: IRQ08; OPS0: GTOWUP; QSPI0: QSPCLK; SCI6: SDA; SCI6: TXD_MOSI" - IO - - 
       P306 80 - - Low - Disabled CMOS None "BUS0: A11; GLCDC0: LCD_DATA18; OPS0: GTOULO; QSPI0: QSSL; SCI6: SCK" - IO - - 
       P307 79 - - Low - Disabled CMOS None "BUS0: A12; GLCDC0: LCD_DATA19; OPS0: GTOUUP; QSPI0: QIO0; SCI6: CTS_RTS_SS" - IO - - 
@@ -499,7 +515,7 @@ FSP Configuration
       P301 87 GLCDC0_LCD_DATA13 - High None "Peripheral mode" CMOS None "AGT0: AGTIO; BUS0: A06; GLCDC0: LCD_DATA13; GPT4: GTIOCB; IRQ0: IRQ06; OPS0: GTOULO; SCI2: RXD_MISO; SCI2: SCL; SCI9: CTS_RTS_SS; SPI1: SSL2" - IO - - 
       P302 86 GLCDC0_LCD_DATA14 - High None "Peripheral mode" CMOS None "BUS0: A07; GLCDC0: LCD_DATA14; GPT4: GTIOCA; IRQ0: IRQ05; OPS0: GTOUUP; SCI2: SDA; SCI2: TXD_MOSI; SPI1: SSL3" - IO - - 
       P303 85 GLCDC0_LCD_DATA15 - High - "Peripheral mode" CMOS None "BUS0: A08; GLCDC0: LCD_DATA15; GPT7: GTIOCB" - IO - - 
-      P304 82 GPIO LCD_RESET Low None "Output mode (Initial High)" CMOS None "BUS0: A09; GLCDC0: LCD_DATA16; GPT7: GTIOCA; IRQ0: IRQ09; OPS0: GTOWLO; SCI6: RXD_MISO; SCI6: SCL" - IO - - 
+      P304 82 GPIO LCD_DISPON Low None "Output mode (Initial High)" CMOS None "BUS0: A09; GLCDC0: LCD_DATA16; GPT7: GTIOCA; IRQ0: IRQ09; OPS0: GTOWLO; SCI6: RXD_MISO; SCI6: SCL" - IO - - 
       P305 81 QSPI0_QSPCLK - High None "Peripheral mode" CMOS None "BUS0: A10; GLCDC0: LCD_DATA17; IRQ0: IRQ08; OPS0: GTOWUP; QSPI0: QSPCLK; SCI6: SDA; SCI6: TXD_MOSI" - IO - - 
       P306 80 QSPI0_QSSL - High - "Peripheral mode" CMOS None "BUS0: A11; GLCDC0: LCD_DATA18; OPS0: GTOULO; QSPI0: QSSL; SCI6: SCK" - IO - - 
       P307 79 QSPI0_QIO0 - High - "Peripheral mode" CMOS None "BUS0: A12; GLCDC0: LCD_DATA19; OPS0: GTOUUP; QSPI0: QIO0; SCI6: CTS_RTS_SS" - IO - - 
@@ -678,6 +694,7 @@ FSP Configuration
     General: Use 16-bit Ticks: Disabled
     General: Idle Should Yield: Enabled
     General: Use Task Notifications: Enabled
+    General: Task Notification Array Entries: 1
     General: Use Mutexes: Enabled
     General: Use Recursive Mutexes: Disabled
     General: Use Counting Semaphores: Enabled
@@ -738,7 +755,7 @@ FSP Configuration
     Instance "FreeRTOS Port (rm_freertos_port)"
     Instance "FreeRTOS Heap 4"
   Thread "LVGL Thread"
-    Symbol: lvgl_thread
+    Symbol: LVGL_thread
     Name: LVGL Thread
     Stack size (bytes): 6144
     Priority: 1
@@ -757,10 +774,6 @@ FSP Configuration
       Input: Graphics Layer 1: General: Vertical size: 272
       Input: Graphics Layer 1: General: Horizontal position: 0
       Input: Graphics Layer 1: General: Vertical position: 0
-      Input: Graphics Layer 1: Background Color: Alpha: 255
-      Input: Graphics Layer 1: Background Color: Red: 255
-      Input: Graphics Layer 1: Background Color: Green: 255
-      Input: Graphics Layer 1: Background Color: Blue: 255
       Input: Graphics Layer 1: Framebuffer: Framebuffer name: fb_background
       Input: Graphics Layer 1: Framebuffer: Number of framebuffers: 2
       Input: Graphics Layer 1: Framebuffer: Section for framebuffer allocation: .bss
@@ -775,10 +788,6 @@ FSP Configuration
       Input: Graphics Layer 2: General: Vertical size: 272
       Input: Graphics Layer 2: General: Horizontal position: 0
       Input: Graphics Layer 2: General: Vertical position: 0
-      Input: Graphics Layer 2: Background Color: Alpha: 255
-      Input: Graphics Layer 2: Background Color: Red: 255
-      Input: Graphics Layer 2: Background Color: Green: 255
-      Input: Graphics Layer 2: Background Color: Blue: 255
       Input: Graphics Layer 2: Framebuffer: Framebuffer name: fb_foreground
       Input: Graphics Layer 2: Framebuffer: Number of framebuffers: 2
       Input: Graphics Layer 2: Framebuffer: Section for framebuffer allocation: .bss
@@ -940,6 +949,7 @@ FSP Configuration
       Name: g_i2c_touch
       Channel: 2
       Rate: Fast-mode
+      Custom Rate (bps): 0
       Rise Time (ns): 120
       Fall Time (ns): 120
       Duty Cycle (%): 50
