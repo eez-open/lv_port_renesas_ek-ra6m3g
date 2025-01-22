@@ -124,12 +124,12 @@
       <configSetting altId="p805.output.low" configurationId="p805"/>
       <configSetting altId="p907.output.low" configurationId="p907"/>
       <configSetting altId="p908.output.low" configurationId="p908"/>
-      <configSetting altId="qspi0.qio0.p307" configurationId="qspi0.qio0" peripheral="QSPI0"/>
-      <configSetting altId="qspi0.qio1.p308" configurationId="qspi0.qio1" peripheral="QSPI0"/>
-      <configSetting altId="qspi0.qio2.p309" configurationId="qspi0.qio2" peripheral="QSPI0"/>
-      <configSetting altId="qspi0.qio3.p310" configurationId="qspi0.qio3" peripheral="QSPI0"/>
-      <configSetting altId="qspi0.qspclk.p305" configurationId="qspi0.qspclk" peripheral="QSPI0"/>
-      <configSetting altId="qspi0.qssl.p306" configurationId="qspi0.qssl" peripheral="QSPI0"/>
+      <configSetting altId="qspi0.qio0.p307" configurationId="qspi0.qio0" isUsedByDriver="true" peripheral="QSPI0"/>
+      <configSetting altId="qspi0.qio1.p308" configurationId="qspi0.qio1" isUsedByDriver="true" peripheral="QSPI0"/>
+      <configSetting altId="qspi0.qio2.p309" configurationId="qspi0.qio2" isUsedByDriver="true" peripheral="QSPI0"/>
+      <configSetting altId="qspi0.qio3.p310" configurationId="qspi0.qio3" isUsedByDriver="true" peripheral="QSPI0"/>
+      <configSetting altId="qspi0.qspclk.p305" configurationId="qspi0.qspclk" isUsedByDriver="true" peripheral="QSPI0"/>
+      <configSetting altId="qspi0.qssl.p306" configurationId="qspi0.qssl" isUsedByDriver="true" peripheral="QSPI0"/>
       <configSetting altId="sci3.scl.p408" configurationId="sci3.scl" peripheral="SCI3"/>
       <configSetting altId="sci3.sda.p409" configurationId="sci3.sda" peripheral="SCI3"/>
       <configSetting altId="sci7.rxd.p614" configurationId="sci7.rxd" peripheral="SCI7"/>

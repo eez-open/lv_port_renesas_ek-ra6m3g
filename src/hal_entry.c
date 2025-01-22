@@ -52,6 +52,8 @@ void R_BSP_WarmStart(bsp_warm_start_event_t event)
         {
             __BKPT(0);
         }
+
+        R_QSPI_Open(&g_qspi0_ctrl, &g_qspi0_cfg);
     }
 }
 

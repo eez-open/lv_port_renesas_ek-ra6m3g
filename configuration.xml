@@ -230,6 +230,10 @@
       <description>FreeRTOS Port</description>
       <originalPack>Renesas.RA.5.7.0.pack</originalPack>
     </component>
+    <component apiversion="" class="HAL Drivers" condition="" group="all" subgroup="r_qspi" variant="" vendor="Renesas" version="5.7.0">
+      <description>Quad Serial Peripheral Interface Flash</description>
+      <originalPack>Renesas.RA.5.7.0.pack</originalPack>
+    </component>
   </raComponentSelection>
   <raElcConfiguration/>
   <raIcuConfiguration/>
@@ -524,6 +528,30 @@
       <property id="module.driver.drw.int_ipl" value="board.icu.common.irq.priority2"/>
     </module>
     <module id="module.driver.tes.dave2d.1481381081"/>
+    <module id="module.driver.qspi_on_qspi.2098748829">
+      <property id="module.driver.qspi.name" value="g_qspi0"/>
+      <property id="module.driver.qspi.spi_protocol" value="module.driver.qspi.spi_protocol.protocol_extended_spi"/>
+      <property id="module.driver.qspi.address_bytes" value="module.driver.qspi.address_bytes.address_bytes_3"/>
+      <property id="module.driver.qspi.read_mode" value="module.driver.qspi.read_mode.read_mode_fast_read_quad_io"/>
+      <property id="module.driver.qspi.dummy_clocks" value="module.driver.qspi.dummy_clocks.dummy_clocks_default"/>
+      <property id="module.driver.qspi.page_size_bytes" value="256"/>
+      <property id="module.driver.qspi.page_program_command" value="0x02"/>
+      <property id="module.driver.qspi.page_program_address_lines" value="module.driver.qspi.page_program_address_lines.data_lines_1"/>
+      <property id="module.driver.qspi.write_enable_command" value="0x06"/>
+      <property id="module.driver.qspi.status_command" value="0x05"/>
+      <property id="module.driver.qspi.write_status_bit" value="0"/>
+      <property id="module.driver.qspi.sector_erase_command" value="0x20"/>
+      <property id="module.driver.qspi.sector_erase_size" value="4096"/>
+      <property id="module.driver.qspi.block_erase_command" value="0xD8"/>
+      <property id="module.driver.qspi.block_erase_size" value="65536"/>
+      <property id="module.driver.qspi.block_erase_32kb_command" value="0x52"/>
+      <property id="module.driver.qspi.block_erase_32kb_size" value="32768"/>
+      <property id="module.driver.qspi.chip_erase_command" value="0xC7"/>
+      <property id="module.driver.qspi.xip_enter_command" value="0x20"/>
+      <property id="module.driver.qspi.xip_exit_command" value="0xFF"/>
+      <property id="module.driver.qspi.qspclk_div" value="module.driver.qspi.qspclk_div.qspclk_div_2"/>
+      <property id="module.driver.qspi.min_qssl_deselect_cycles" value="module.driver.qspi.min_qssl_deselect_cycles.qssl_min_high_level_4_qspclk"/>
+    </module>
     <object id="rtos.awsfreertos.object.binary_semaphore.1748697535">
       <property id="rtos.awsfreertos.object.binary_semaphore.symbol" value="_SemaphoreVsync"/>
       <property id="rtos.awsfreertos.object.binary_semaphore.allocation" value="rtos.awsfreertos.object.binary_semaphore.allocation.static"/>
@@ -544,6 +572,7 @@
       <stack module="module.driver.ioport_on_ioport.0"/>
       <stack module="module.middleware.rm_freertos_port.0"/>
       <stack module="module.freertos.heap.4.198003606"/>
+      <stack module="module.driver.qspi_on_qspi.2098748829"/>
     </context>
     <context id="rtos.awsfreertos.thread.915776018">
       <property id="_symbol" value="LVGL_thread"/>
@@ -659,6 +688,10 @@
     <config id="config.driver.drw">
       <property id="config.driver.drw.indirect" value="config.driver.drw.indirect.on"/>
       <property id="config.driver.drw.malloc" value="config.driver.drw.malloc.default"/>
+    </config>
+    <config id="config.driver.qspi">
+      <property id="config.driver.qspi.param_checking_enable" value="config.driver.qspi.param_checking_enable.bsp"/>
+      <property id="config.driver.qspi.extended_spi_multi_line_program" value="config.driver.qspi.extended_spi_multi_line_program.disabled"/>
     </config>
   </raModuleConfiguration>
   <raPinConfiguration>

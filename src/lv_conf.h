@@ -363,6 +363,7 @@
 #define LV_ATTRIBUTE_MEM_ALIGN
 
 /*Attribute to mark large constant arrays for example font's bitmaps*/
+//#define LV_ATTRIBUTE_LARGE_CONST __attribute__((section(".qspi_flash"))) __attribute__((__used__)) __attribute__((aligned(64)))
 #define LV_ATTRIBUTE_LARGE_CONST
 
 /*Compiler prefix for a big array declaration in RAM*/
