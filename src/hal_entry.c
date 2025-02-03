@@ -53,7 +53,41 @@ void R_BSP_WarmStart(bsp_warm_start_event_t event)
             __BKPT(0);
         }
 
-        R_QSPI_Open(&g_qspi0_ctrl, &g_qspi0_cfg);
+        //R_QSPI_Open(&g_qspi0_ctrl, &g_qspi0_cfg);
+
+        {
+            err = R_QSPI_Open(&g_qspi0_ctrl, &g_qspi0_cfg);
+            if (FSP_SUCCESS != err)
+            {
+                __BKPT(0);
+            }
+
+
+            uint8_t   data;
+            uint8_t command[3] ={0x01, 0x40, 0x00};
+
+            /* Write enable command */
+            err = R_QSPI_DirectWrite(&g_qspi0_ctrl, &(g_qspi0_cfg.write_enable_command), 1, false);
+            assert(FSP_SUCCESS == err);
+
+            R_BSP_SoftwareDelay(10, BSP_DELAY_UNITS_MICROSECONDS);
+
+            /* Write status register */
+            err = R_QSPI_DirectWrite(&g_qspi0_ctrl, &command[0], 3, false);
+            assert(FSP_SUCCESS == err);
+
+            R_BSP_SoftwareDelay(10, BSP_DELAY_UNITS_MICROSECONDS);
+
+            /* Read a status register. */
+            err  = R_QSPI_DirectWrite(&g_qspi0_ctrl, &(g_qspi0_cfg.status_command), 1, true);
+            assert(FSP_SUCCESS == err);
+
+            R_BSP_SoftwareDelay(10, BSP_DELAY_UNITS_MICROSECONDS);
+
+            err = R_QSPI_DirectRead(&g_qspi0_ctrl, &data, 2);
+            assert(FSP_SUCCESS == err);
+        }
+
     }
 }
 

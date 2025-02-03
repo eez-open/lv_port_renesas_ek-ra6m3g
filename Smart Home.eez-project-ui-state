@@ -1,8 +1,7 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[..\\..\\..\\Users\\mvladic\\eez-projects\\examples\\Smart Home Low Res\\Smart Home Low Res.eez-project]:/userPages/0",
-    "selectedFontObject": "[..\\..\\..\\Users\\mvladic\\eez-projects\\examples\\Smart Home Low Res\\Smart Home Low Res.eez-project]:/fonts/5",
-    "selectedBitmapObject": "[..\\..\\..\\Users\\mvladic\\eez-projects\\examples\\Smart Home Low Res\\Smart Home Low Res.eez-project]:/bitmaps/4",
+    "selectedUserPageObject": "[Smart Home.eez-project]:/userPages/0",
+    "selectedBitmapObject": "[Smart Home.eez-project]:/bitmaps/0",
     "subnavigationSelectedItems": {}
   },
   "layoutModel": {
@@ -202,34 +201,23 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#86e217b8-638a-48f4-98d8-c58d0ee64ec4",
+                  "id": "#88a7553b-54e0-469d-af45-d0f325926d29",
                   "name": "heating_screen",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[..\\..\\..\\Users\\mvladic\\eez-projects\\examples\\Smart Home Low Res\\Smart Home Low Res.eez-project]:/userPages/0",
+                    "objectPath": "[Smart Home.eez-project]:/userPages/0",
                     "permanent": false
                   },
                   "icon": "svg:page"
                 },
                 {
                   "type": "tab",
-                  "id": "#719b94fc-e396-47be-aaea-0920b0b0faf3",
-                  "name": "bold_23",
-                  "component": "editor",
-                  "config": {
-                    "objectPath": "[..\\..\\..\\Users\\mvladic\\eez-projects\\examples\\Smart Home Low Res\\Smart Home Low Res.eez-project]:/fonts/5",
-                    "permanent": false
-                  },
-                  "icon": "material:font_download"
-                },
-                {
-                  "type": "tab",
-                  "id": "#e56003e2-cecb-40af-8348-0d87978a0eff",
+                  "id": "#f6cb8f07-97d0-40b4-b532-bb5dba32b105",
                   "name": "Settings",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[..\\..\\..\\Users\\mvladic\\eez-projects\\examples\\Smart Home Low Res\\Smart Home Low Res.eez-project]:/settings",
-                    "subObjectPath": "[..\\..\\..\\Users\\mvladic\\eez-projects\\examples\\Smart Home Low Res\\Smart Home Low Res.eez-project]:/settings",
+                    "objectPath": "[Smart Home.eez-project]:/settings",
+                    "subObjectPath": "[Smart Home.eez-project]:/settings",
                     "permanent": false
                   },
                   "icon": "material:settings"
@@ -479,11 +467,11 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#fde8cb3e-6696-49d6-8246-3e8a5d00aff3",
-                  "name": "heating_screen",
+                  "id": "#cf6d9552-95af-4fe2-be3b-3359f6ac7e71",
+                  "name": "lighting_screen",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[Smart Home Low Res.eez-project]:/userPages/0",
+                    "objectPath": "[Smart Home.eez-project]:/userPages/2",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -1076,6 +1064,54 @@
       }
     },
     "[..\\..\\..\\Users\\mvladic\\eez-projects\\examples\\Smart Home Low Res\\Smart Home Low Res.eez-project]:/userPages/2[flow-state]": {
+      "selection": {},
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -136
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[Smart Home.eez-project]:/userPages/0[flow-state]": {
+      "selection": {},
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -136
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[Smart Home.eez-project]:/userPages/1[flow-state]": {
+      "selection": {},
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -136
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[Smart Home.eez-project]:/userPages/2[flow-state]": {
       "selection": {},
       "transform": {
         "translate": {
