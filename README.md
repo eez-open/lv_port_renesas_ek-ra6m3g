@@ -1,6 +1,6 @@
 # EEZ Studio example with Renesas EK-RA6M3G and LVGL
 
-![EK-RA6M3G Kit Showing EEZ Studio Application](EK-RA6M3G_CounterApp.png)
+![EK-RA6M3G Kit Showing EEZ Studio Application](EK-RA6M3G_CounterApp.jpg)
 
 
 Integration steps:
